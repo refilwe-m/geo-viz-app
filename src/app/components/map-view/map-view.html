@@ -1,12 +1,17 @@
 <form [formGroup]="mapForm" (ngSubmit)="onSubmit()">
-  <div class="flex flex-col">
-    <label for="latitude">Latitude:</label>
-    <input class="border border-gray-400 rounded-lg" id="latitude" type="number" formControlName="latitude">
-  </div>
-  <div class="flex flex-col">
-    <label for="longitude">Longitude:</label>
-    <input class="border border-gray-400 rounded-lg" id="longitude" type="number" formControlName="longitude">
-  </div>
-  <button type="submit" [disabled]="!mapForm.valid">Search</button>
+  <section class="grid grid-cols-1 md:grid-cols-3 items-end gap-4">
+    <div class="flex flex-col">
+      <label class="font-bold" for="latitude">Latitude:</label>
+      <input placeholder="-26.04" class="border border-gray-400 px-3 py-2 rounded-xl" id="latitude" type="number"
+        formControlName="latitude">
+    </div>
+    <div class="flex flex-col">
+      <label class="font-bold" for="longitude">Longitude:</label>
+      <input placeholder="26.03" class="border border-gray-400 px-3 py-2 rounded-lg" id="longitude" type="number"
+        formControlName="longitude">
+    </div>
+    <button class="bg-teal-400 rounded-xl hover:bg-teal-500 px-3 py-2.5 text-base font-semibold" type="submit"
+      [disabled]="!mapForm.valid">Pin Location</button>
+  </section>
 </form>
-<div id="map" style="height: 500px; width: 100%;"></div>
+<div id="map" class="w-full h-[85%] rounded-lg my-4"></div>
