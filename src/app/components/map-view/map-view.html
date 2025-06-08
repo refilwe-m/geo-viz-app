@@ -1,0 +1,12 @@
+<form [formGroup]="mapForm" (ngSubmit)="onSubmit()">
+  <div class="flex flex-col">
+    <label for="latitude">Latitude:</label>
+    <input class="border border-gray-400 rounded-lg" id="latitude" type="number" formControlName="latitude">
+  </div>
+  <div class="flex flex-col">
+    <label for="longitude">Longitude:</label>
+    <input class="border border-gray-400 rounded-lg" id="longitude" type="number" formControlName="longitude">
+  </div>
+  <button type="submit" [disabled]="!mapForm.valid">Search</button>
+</form>
+<div id="map" style="height: 500px; width: 100%;"></div>
