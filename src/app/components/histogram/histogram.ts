@@ -21,12 +21,12 @@ export class Histogram implements OnInit {
 
     const option = {
       title: {
-        text: 'Sample Histogram',
+        text: 'Office Registrar',
       },
       tooltip: {},
       xAxis: {
         type: 'category',
-        data: ['Bin 1', 'Bin 2', 'Bin 3', 'Bin 4', 'Bin 5', 'Bin 6'],
+        data: ['Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat'],
       },
       yAxis: {
         type: 'value',

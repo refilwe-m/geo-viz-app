@@ -2,16 +2,19 @@
   <section class="grid grid-cols-1 md:grid-cols-3 items-end gap-4">
     <div class="flex flex-col">
       <label class="font-bold" for="latitude">Latitude:</label>
-      <input placeholder="-26.04" class="border border-gray-400 px-3 py-2 rounded-xl" id="latitude" type="number"
-        formControlName="latitude">
+      <input placeholder="e.g -26.04" class="border placeholder:text-gray-400 border-gray-400 px-3 py-2 rounded-xl"
+        id="latitude" type="number" formControlName="latitude">
     </div>
     <div class="flex flex-col">
       <label class="font-bold" for="longitude">Longitude:</label>
-      <input placeholder="26.03" class="border border-gray-400 px-3 py-2 rounded-lg" id="longitude" type="number"
-        formControlName="longitude">
+      <input placeholder="e.g 26.03" class="border placeholder:text-gray-400 border-gray-400 px-3 py-2 rounded-lg"
+        id="longitude" type="number" formControlName="longitude">
     </div>
-    <button class="bg-teal-400 rounded-xl hover:bg-teal-500 px-3 py-2.5 text-base font-semibold" type="submit"
-      [disabled]="!mapForm.valid">Pin Location</button>
+    <button class="rounded-xl hover:bg-teal-500 px-3 py-2.5 text-base font-semibold"
+      [class.bg-gray-500]="!mapForm.valid" [class.bg-teal-400]="mapForm.valid" type="submit"
+      [disabled]="!mapForm.valid">
+      Pin Location
+    </button>
   </section>
 </form>
 <div id="map" class="w-full h-[85%] rounded-lg my-4"></div>
